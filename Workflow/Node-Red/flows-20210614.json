@@ -1,0 +1,330 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "25fb0298.87509e",
+        "type": "watch-directory",
+        "z": "f6f2187d.f17ca8",
+        "folder": "/usr/src/node-red",
+        "recursive": 0,
+        "typeEvent": "create",
+        "ignoreInitial": true,
+        "ignoredFiles": "",
+        "ignoredFilesType": "re",
+        "name": "Watchfolder",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "6d48064c.98b0d8"
+            ]
+        ]
+    },
+    {
+        "id": "25110f19.34d1d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Formatter",
+        "func": "path = msg.filename\nfilename = msg.file\ntime = msg.time\n\nmsg.payload = {\n    \"title\": filename,\n    \"path\": path,\n    \"time\": time\n}\n\nreturn msg.payload;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "c5c49ef9.37e21",
+                "4db3725d.65795c"
+            ]
+        ]
+    },
+    {
+        "id": "c5c49ef9.37e21",
+        "type": "mongodb out",
+        "z": "f6f2187d.f17ca8",
+        "mongodb": "f47ed4be.456858",
+        "name": "Write new file input",
+        "collection": "test",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1190,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4ffb25de.02028c",
+        "type": "e-mail",
+        "z": "f6f2187d.f17ca8",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "j.mermethusson@gmail.com",
+        "dname": "",
+        "x": 1220,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4db3725d.65795c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Formatter",
+        "func": "path = msg.filename\nid = msg._msgid\nfilename = msg.file\ntime = msg.time\n\n\ncorps = `Hello, we received the file ${filename} at ${time}.\\nClick on http://localhost:1880/approve?id=${id} to enable the transcoding workflow.\\n Othewise click on: Click on http://localhost:1880/deny?id=${id} `\n\nmsg = {\n    \"topic\": \"File Approval\",\n    \"payload\": corps\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 340,
+        "wires": [
+            [
+                "4ffb25de.02028c"
+            ]
+        ]
+    },
+    {
+        "id": "f3902f5b.52d0e",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/approve",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "15db45e.e5915ba"
+            ]
+        ]
+    },
+    {
+        "id": "63d1389.faee4c8",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1310,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "41b33974.a95e38",
+        "type": "template",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n<body>\n\n<h1>File Workflow</h1>\n<p>The.document {{payload.0.title}} is accepted.</p>\n\n</body>\n</html>",
+        "output": "str",
+        "x": 1130,
+        "y": 520,
+        "wires": [
+            [
+                "63d1389.faee4c8"
+            ]
+        ]
+    },
+    {
+        "id": "6d48064c.98b0d8",
+        "type": "moment",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "date",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "",
+        "locale": "en-US",
+        "output": "time",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "25110f19.34d1d"
+            ]
+        ]
+    },
+    {
+        "id": "348b4042.3ecc9",
+        "type": "mongodb in",
+        "z": "f6f2187d.f17ca8",
+        "mongodb": "f47ed4be.456858",
+        "name": "Read database",
+        "collection": "test",
+        "operation": "find",
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "41b33974.a95e38"
+            ]
+        ]
+    },
+    {
+        "id": "15db45e.e5915ba",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.limit = 5; //obligatoire\nmsg.skip = 0;\nmsg.payload = {_msgid: msg.payload.id}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 520,
+        "wires": [
+            [
+                "348b4042.3ecc9"
+            ]
+        ]
+    },
+    {
+        "id": "2e792e23.b4a902",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/deny",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 460,
+        "y": 620,
+        "wires": [
+            [
+                "79235026.9da35"
+            ]
+        ]
+    },
+    {
+        "id": "7e4a20ad.85dd4",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1310,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "76ddc24e.66ebbc",
+        "type": "template",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n<body>\n\n<h1>File Workflow</h1>\n<p>The.document {{payload.0.title}} is refused.</p>\n\n</body>\n</html>",
+        "output": "str",
+        "x": 1130,
+        "y": 620,
+        "wires": [
+            [
+                "7e4a20ad.85dd4"
+            ]
+        ]
+    },
+    {
+        "id": "1cf5c429.a74f6c",
+        "type": "mongodb in",
+        "z": "f6f2187d.f17ca8",
+        "mongodb": "f47ed4be.456858",
+        "name": "Read database",
+        "collection": "test",
+        "operation": "find",
+        "x": 880,
+        "y": 620,
+        "wires": [
+            [
+                "76ddc24e.66ebbc",
+                "a5ef336e.d2b96"
+            ]
+        ]
+    },
+    {
+        "id": "79235026.9da35",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.limit = 5; //obligatoire\nmsg.skip = 0;\nmsg.payload = {_msgid: msg.payload.id}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 620,
+        "wires": [
+            [
+                "1cf5c429.a74f6c"
+            ]
+        ]
+    },
+    {
+        "id": "dd4356c1.9562b8",
+        "type": "mongodb out",
+        "z": "f6f2187d.f17ca8",
+        "mongodb": "f47ed4be.456858",
+        "name": "Remove database",
+        "collection": "test",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "delete",
+        "x": 1350,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a5ef336e.d2b96",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "func": "msg.payload = {_msgid: msg.payload[0]._msgid}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 700,
+        "wires": [
+            [
+                "dd4356c1.9562b8"
+            ]
+        ]
+    },
+    {
+        "id": "f47ed4be.456858",
+        "type": "mongodb",
+        "hostname": "172.17.0.3",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "test",
+        "name": ""
+    }
+]
