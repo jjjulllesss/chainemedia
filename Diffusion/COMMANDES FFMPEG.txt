@@ -14,3 +14,6 @@ ffmpeg -f libndi_newtek -i "DFSRV101 (OBS)" -f srt -i "C:\Users\Administrateur.D
 
 2) LIRE flux MPEG-TS OVER UDP sur ffplay
 ffplay udp://239.0.0.1:12342
+
+3) Analyse du flux sur ffprobe
+ffprobe udp://239.0.0.1:12342
