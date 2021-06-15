@@ -1,0 +1,16 @@
+COMMANDES FFMPEG - CHAINE MEDIA
+
+lister flux NDI disponibles sur le réseau
+ffmpeg -f libndi_newtek -find_sources 1 -i dummy
+
+Lire flux NDI sur ffplay
+ffplay -f libndi_newtek -i "DFSRV101 (MornClub TV)"
+
+Transcode NDI to MPEG-TS (court mais erreurs)
+ffmpeg -f libndi_newtek -i "DFSRV101 (OBS)" -vcodec libx264 -f mpegts udp://239.0.0.1:12342
+
+1) Transcode NDI to MPEG-TS (complet, still in progress)
+ffmpeg -f libndi_newtek -i "DFSRV101 (OBS)" -f srt -i "C:\Users\Administrateur.DFSRV101\Downloads\Sharknado.srt" -map 0:0 -map 0:1 -map 0:1 -map 1:0 -c:v libx264 -profile:v high -level:v 4.1 -vf scale=1920:1080,tinterlace=4 -x264-params keyint=120:scenecut=0 -b:v 4500k -r 25 -vsync 1 -pix_fmt yuv420p -x264opts keyint=24:keyint_min=24:bframes=7:force_cfr=1:b_adapt=0:scenecut=0 -colorspace bt709  -c:a:0  ac3  -ac 2 -b:a:0 128k -c:a:1  ac3  -ac 2 -b:a:1 128k -c:s dvbsub -metadata:s:s:0 language=fra -mpegts_start_pid 0x0010 -mpegts_pmt_start_pid 0x1500 -mpegts_start_pid 0x15 -mpegts_service_id 0x5566 -mpegts_transport_stream_id 0x3344 -metadata service_provider="INA TV" -metadata service_name="MornClub TV" -flags +ildct -f mpegts udp://239.0.0.1:12342?pkt_size=1316
+
+2) LIRE flux MPEG-TS OVER UDP sur ffplay
+ffplay udp://239.0.0.1:12342
