@@ -1,0 +1,542 @@
+    1  sudo su
+    2  exit
+    3  ls /media
+    4  exit
+    5  cd /media
+    6  ls
+    7  ll
+    8  ls
+    9  ll
+   10  scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts -p Admin@2021 .
+   11  apt install sshpass
+   12  sudo apt install sshpass
+   13  sshpass "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts .
+   14  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts .
+   15  sshpass -p "Admin@2021" sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts .
+   16  ls
+   17  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts .
+   18  sshpass -p "Admin@2021" sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts .
+   19  sshpass -p "Admin@2021" sudo scp administrator@192.168.254.1:/home/administrator/Documents/test.txt .
+   20  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/administrator/Documents/test.txt /media/
+   21  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/administrator/Documents/test.txt /home/administrator/
+   22  ls /home/administrator/
+   23  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/bb24p_30sec.ts /home/administrator/
+   24  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts /home/administrator/
+   25  ls /home/administrator/
+   26  cd /home/administrator/
+   27  ls
+   28  rm bbb24p_30sec.ts 
+   29  ls
+   30  ps -aux | grep node
+   31  sudo kill 6869
+   32  cd node_exporter-1.1.2.linux-amd64/
+   33  ls
+   34  ./node_exporter --web.listen-address=192.168.11.3:9100
+   35  ./node_exporter --web.listen-address=192.168.11.3:9100 &
+   36  curl
+   37  sudo apt install curl
+   38  curl 192.168.11.3
+   39  curl 192.168.11.3:9100
+   40  curl 192.168.11.3:9100/metrics
+   41  exi4
+   42  exit
+   43  cd /home/administrator/
+   44  ls
+   45  rm bbb24p_30sec.ts 
+   46  ls
+   47  mkdir output
+   48  ls
+   49  ffmpeg -i /home/administrator/bbb24p_30sec.ts -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1" /home/administator/output/output.mxf
+   50  cd /home/administrator/output/
+   51  ls
+   52  ffmpeg -i /home/administrator/bbb24p_30sec.ts -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1" output.mxf
+   53  ls
+   54  pwd
+   55  ffmpeg -i /home/administrator/bbb24p_30sec.ts -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1" /home/administrator/uploads/output.mxf
+   56  ls
+   57  rm output.mxf 
+   58  cd ..
+   59  ls
+   60  cd output/
+   61  ls
+   62  cd ..
+   63  ffmpeg -i /home/administrator/bbb24p_30sec.ts
+   64  mkdir /mnt/smb-nas1
+   65  sudo mkdir /mnt/smb-nas1
+   66  sudo mount -t cifs -o user=jmermet //192.168.11.4/chaineMedia /mnt/smb-nas1
+   67  sudo apt-get install cifs-utils
+   68  sudo mount -t cifs -o user=jmermet //192.168.11.4/chaineMedia /mnt/smb-nas1
+   69  cd /mnt/smb-nas1/
+   70  ls
+   71  cd input/
+   72  ls
+   73  rm bbb24p_30sec.ts 
+   74  sudo rm bbb24p_30sec.ts 
+   75  ls
+   76  cd ..
+   77  ls
+   78  cd input/
+   79  ls
+   80  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input | echo /home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi"
+   81  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input | echo /home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi
+   82  sudo usermod -aG sudo administrator
+   83  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input | echo /home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi
+   84  sudo chmod -R a+rw /mnt/smb-nas1/
+   85  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input | echo /home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi
+   86  ls
+   87  touch hello.txt
+   88  df -h
+   89  cat /etc/fstab
+   90  history
+   91  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input | echo /home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi
+   92  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input
+   93  ssh 192.168.254.1
+   94  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input
+   95  ls
+   96  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input
+   97  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi
+   98  sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi /mnt/smb-nas1/input
+   99  ls
+  100  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test1080.mp4 /mnt/smb-nas1/input
+  101  sudo sshpass -p "Admin@2021" sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/test1080.mp4 /mnt/smb-nas1/input
+  102  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test1080.mp4 /mnt/smb-nas1/input
+  103  ls
+  104  rm test1080.mp4 
+  105  sudo rm test1080.mp4
+  106  sudo visudo
+  107  ls
+  108  sudo rm UHD_CJI_CONTRIB_bckp-09-06-2021-_14-42-25_0.mov 
+  109  ls
+  110  wget
+  111  wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+  112  tar xvfz node_exporter-1.1.2.linux-amd64.tar.gz 
+  113  cd node_exporter-1.1.2.linux-amd64/
+  114  ls
+  115  ./node_exporter 
+  116  ufw
+  117  sudo ufw status
+  118  iptables
+  119  iptables -L
+  120  sudo iptables -L
+  121  ps -au
+  122  ps -aux
+  123  ps -aux | grep node
+  124  ./node_exporter 
+  125  clear
+  126  ./node_exporter 
+  127  ls
+  128  ps -aux | grep node
+  129  sudo kill 6987
+  130  ps -aux | grep node
+  131  ./node_exporter --collector.systemd --collector.processes &
+  132  telnet 192.168.10.11
+  133  nohup node_exporter-1.1.2.linux-amd64/node_exporter --collector.systemd --collector.processes &
+  134  exit
+  135  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
+  136  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+  137  sudo apt-get update
+  138  sudo apt-get install tailscale
+  139  sudo tailscale up
+  140  exot
+  141  exit
+  142  ls
+  143  mediaconch --help
+  144  mediaconch -ft --Policy=MPEG4-AVC.xml bbb24p_30sec.ts
+  145  mediaconch -ft --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  146  nano MPEG4-AVC.xml 
+  147  exit
+  148  ls
+  149  sudo apt install mediaconch
+  150  sudo apt update
+  151  mediaconch 
+  152  mediaconch --help
+  153  cd ./config
+  154  mediaconch
+  155  mediaconch --help
+  156  apt install mediaconch-server
+  157  sudo apt install mediaconch-server
+  158  wget https://mediaarea.net/repo/deb/repo-mediaarea_1.0-16_all.deb && dpkg -i repo-mediaarea_1.0-16_all.deb && apt-get update
+  159  sudo wget https://mediaarea.net/repo/deb/repo-mediaarea_1.0-16_all.deb
+  160  sudo dpkg -i repo-mediaarea_1.0-16_all.deb 
+  161  sudo apt update
+  162  sudo apt install mediaconch-server
+  163  sudo apt search mediaconch
+  164  sudo apt install mediaconch-gui
+  165  ls
+  166  mediaconch bbb24p_30sec.ts 
+  167  mediaconch plex_videoSecond.mp4 
+  168  mediaconch --help
+  169  mediaconch plex_videoSecond.mp4 -fi
+  170  mediaconch -f plex_videoSecond.mp4
+  171  mediaconch -fi plex_videoSecond.mp4
+  172  mediaconch -ft plex_videoSecond.mp4
+  173  mediaconch --help
+  174  mediaconch --pluginslist
+  175  touch MPEG-4 AVC (H.264-AAC).xml
+  176  touch MPEG4-AVC.xml
+  177  ls
+  178  nano MPEG4-AVC.xml 
+  179  nano mediaconch_prolicy;xml
+  180  nano mediaconch_prolicy.xml
+  181  nano mediaconch_policy.xml
+  182  rm mediaconch_policy.xml 
+  183  nano mediaconch_policy.xml
+  184  rm mediaconch_policy.xml 
+  185  nano mediaconch_policy.xml
+  186  cd /mnt/smb-nas1/output_prod/
+  187  ls
+  188  cd ..
+  189  ls
+  190  rm outpu_prod 
+  191  sudo rm outpu_prod 
+  192  ls
+  193  cd Reception_ftp/
+  194  ls
+  195  cd
+  196  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  output.mp4
+  197  clear
+  198  exit
+  199  ls
+  200  rm repo-mediaarea_1.0-16_all.deb
+  201  rm repo-mediaarea_1.0-16_all.deb.1 
+  202  ls
+  203  mediaconch -ft --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  204  nano MPEG4-AVC.xml 
+  205  mediaconch -ft --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  206  mediaconch -fi --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  207  nano MPEG4-AVC.xml 
+  208  clear
+  209  mediaconch -fi --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  210  mediaconch -ft --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  211  ls
+  212  cd output/
+  213  ls
+  214  cd /mnt:
+  215  cd /mnt
+  216  ls
+  217  cd smb-nas1/
+  218  ls
+  219  rm outpu_prod 
+  220  cd output_prod/
+  221  ls
+  222  mediaconch -ft --Policy=MPEG4-AVC.xml  prod_test108000.mxf
+  223  mediaconch -ft --Policy=/home/administrator/MPEG4-AVC.xml  prod_test108000.mxf
+  224  cd
+  225  ls
+  226  nano mediaconch_policy.xml
+  227  clear
+  228  nano mediaconch_policy.xml
+  229  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  /mnt/prod_test108000.mxf
+  230  mediaconch --help
+  231  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  prod_test108000.mxf
+  232  mediaconch -ft --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  233  mediaconch -fs --Policy=MPEG4-AVC.xml  plex_videoSecond.mp4
+  234  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  235  ls  /mnt/smb-nas1/output_prod/
+  236  nano mediaconch_policy.xml
+  237  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  238  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  239  nano mediaconch_policy.xml
+  240  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  241  cd
+  242  ls
+  243  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  plex_videoSecond.mp4 
+  244  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  245  nano mediaconch_policy.xml
+  246  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  247  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  /mnt/smb-nas1/output_prod/prod_test108000.mxf
+  248  nano mediaconch_policy.xml
+  249  ls
+  250  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  251  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  252  nano mediaconch_policy.xml
+  253  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  254  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  255  mediaconch -ft --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  256  nano mediaconch_policy.xml
+  257  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  258  nano mediaconch_policy.xml
+  259  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  output.mp4 
+  260  exit
+  261  sudo apt install mediaconch
+  262  mediaconch
+  263  ls
+  264  mediaconch bbb24p_30sec.ts 
+  265  ls
+  266  cd /mnt/smb-nas1/
+  267  cd input/
+  268  ls
+  269  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test10800.mp4 /mnt/smb-nas1/input
+  270  ls
+  271  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test10800.mp4 /mnt/smb-nas1/input
+  272  history
+  273  sudo chmod -R a+rw /mnt/smb-nas1/
+  274  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test10800.mp4 /mnt/smb-nas1/input
+  275  sudo chmod -R a+rw /mnt/smb-nas1/input/
+  276  sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test10800.mp4 /mnt/smb-nas1/input
+  277  chmod 777 /mnt/smb-nas1/input/
+  278  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/test10800.mp4 /mnt/smb-nas1/input
+  279  ls
+  280  sudo sshpass -p "Admin@2021" sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/test10800.mp4 /mnt/smb-nas1/input
+  281  ls
+  282  ffmpeg -i /home/mnt/smb-nas1/inputtest108000.mp4  -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1" output_test108000.mxf | mv output_test108000.mxf /home/administrator/output
+  283  sudo ffmpeg -i /home/mnt/smb-nas1/inputtest108000.mp4  -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1" output_test108000.mxf | mv output_test108000.mxf /home/administrator/output
+  284  cd 
+  285  sudo ffmpeg -i /home/mnt/smb-nas1/inputtest108000.mp4  -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1" output_test108000.mxf | mv output_test108000.mxf /home/administrator/output
+  286  cd /mnt/smb-nas1/ls
+  287  cd /mnt/smb-nas1/
+  288  cd input/
+  289  ls
+  290  ll
+  291  rm test108000.mp4 
+  292  sudo rm test108000.mp4 
+  293  sudo rm test10800.mp4 
+  294  ls
+  295  sudo rm test108000.mp4 
+  296  ls
+  297  sudo rm test108000.mp4 
+  298  ls
+  299  sudo rm test108000.mp4 
+  300  ls
+  301  sudo rm test108000.mp4 
+  302  ls
+  303  sudo rm test108000.mp4 
+  304  ls
+  305  cd ../output_prod/
+  306  ls
+  307  cd 
+  308  ls
+  309  cd /mnt/smb-nas1/output_prod/
+  310  ls
+  311  cd
+  312  ls
+  313  sudo mv prod_test108001.mxf /mnt/smb-nas1/output_prod
+  314  ls
+  315  rm plex_test108001.mp4 
+  316  sudo rm plex_test108001.mp4 
+  317  sudo rm plex_test108000.mp4 
+  318  sudo rm prod_test108000.mxf 
+  319  ls
+  320  rm output_bbb24p_30sec.mxf 
+  321  ls
+  322  sudo ffmpeg -y -i /mnt/smb-nas1/input/video1.mp4 -vcodec libx264 plex_video1.mp4 | sudo mv plex_video1.mp4 /mnt/smb-nas1/output_plex/
+  323  cd /mnt/smb-nas1/input/
+  324  ls
+  325  sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/video2.mp4 /mnt/smb-nas1/input/
+  326  ls
+  327  sudo rm video2.mp4 
+  328  ls
+  329  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/video2.mp4 /mnt/smb-nas1/input/
+  330  ls
+  331  cd 
+  332  ls
+  333  sudo mv plex_video2.mp4 /mnt/smb-nas1/output_plex/
+  334  ls
+  335  rm prod_video2.mxf 
+  336  ls
+  337  cd /mnt/smb-nas1/input/
+  338  ls
+  339  cd 
+  340  ls
+  341  ll prod_videoSecond.mxf 
+  342  pwd
+  343  sudo mv /home/administrator/prod_videoSecond.mxf /mnt/smb-nas1/output_prod/
+  344  ls
+  345  sudo mv /home/administrator/prod_videoSecond.mxf /mnt/smb-nas1/output_prod/
+  346  ls
+  347  cd /mnt/smb-nas1/input/
+  348  ls
+  349  sudo ffmpeg -y -i video.mp4 /mnt/smb-nas1/video.mp4
+  350  sudo ffmpeg -y -i video.mp4 videout.mp4
+  351  sudo ffmpeg -y -i video.mp4 /home/administrator/videout.mp4
+  352  sudo ffmpeg -y -i /mnt/smb-nas1/input/video.mp4 /home/administrator/videout.mp4
+  353  ls
+  354  sudo ffmpeg -y -i /mnt/smb-nas1/input/video2.mp4 /home/administrator/videout.mp4
+  355  cd
+  356  sudo ffmpeg -y -i /mnt/smb-nas1/input/videoSecond.mp4  plex_videoSecond.mp4 | sudo mv plex_videoSecond.mp4 /mnt/smb-nas1/output_plex/
+  357  cd /mnt/smb-nas1/output_plex/
+  358  ls
+  359  ll
+  360  rm plex_videoSecond.mp4 
+  361  rm prod_videoSecond.mxf 
+  362  sudo rm prod_videoSecond.mxf 
+  363  cd ../output_prod/
+  364  ls
+  365  ll
+  366  rm prod_videoSecond.mxf 
+  367  sudo rm prod_videoSecond.mxf 
+  368  ls
+  369  cd ../output_plex/
+  370  ls
+  371  cd 
+  372  ls
+  373  ll
+  374  cd /mnt/smb-nas1/input/
+  375  ls
+  376  ffmpeg -i videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1" -video_size 1920x1080 -framerate 50 -i  -ac 2 -c:a libfdk_aac -b:a 128k -vf yadif output.mxf \
+  377  ffmpeg -i videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1" -video_size 1920x1080 -framerate 50 -i  -ac 2 -c:a libfdk_aac -b:a 128k -vf yadif output.mxf
+  378  ffmpeg -i videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif" -video_size 1920x1080 -framerate 50 -i  -ac 2 -c:a libfdk_aac -b:a 128k     output.mxf
+  379  ffmpeg -i videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif" -video_size 1920x1080 -framerate 50  -ac 2 -c:a libfdk_aac -b:a 128k     output.mxf
+  380  ffmpeg -i videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif" -video_size 1920x1080 -framerate 50  -ac 2 -c:a aac -b:a 128k     output.mxf
+  381  ffmpeg -i videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif" -video_size 1920x1080 -framerate 50  -ac 2 -c:a aac -b:a 128k     /home/administrator/output.mxf
+  382  cd
+  383  ffmpeg -i /mnt/smb-nas1/input/videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif" -video_size 1920x1080 -framerate 50  -ac 2 -c:a aac -b:a 128k     output.mxf
+  384  ffmpeg -i /mnt/smb-nas1/input/videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif" -framerate 50  -ac 2 -c:a aac -b:a 128k     output.mxf
+  385  sudo ffmpeg -i /mnt/smb-nas1/input/videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif"     -video_size 1920x1080 -framerate 50  -ac 2 -c:a aac -b:a 128k     output.mxf
+  386  sudo ffmpeg -i /mnt/smb-nas1/input/videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif"     -video_size 1920x1080 -framerate 50  -ac 2 -c:a aac -b:a 128k     output.mp4
+  387  ls
+  388  ll
+  389  apt install mediainfo
+  390  sudo apt install mediainfo
+  391  mediainfo output.mp4 
+  392  ll
+  393  sudo ffmpeg -i /mnt/smb-nas1/input/videoSecond.mp4     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif"     -video_size 1920x1080 -r 50  -ac 2 -c:a aac -b:a 128k     output.mp4
+  394  mediainfo output.mp4 
+  395  mediainfo --help
+  396  mediainfo output.mp4 -f
+  397  mv 
+  398  ls
+  399  cd /mnt/smb-nas1/output_prod/
+  400  ls
+  401  mediainfomed
+  402  mv output.mp4 /mnt/smb-nas1/output_prod/
+  403  sudo mv output.mp4 /mnt/smb-nas1/output_prod/
+  404  cd /mnt/smb-nas1/output_prod/
+  405  mediainfo prod_Complexsource_1080i50.mp4 
+  406  cd
+  407  sudo ffmpeg -i /mnt/smb-nas1/input/Complexsource_1080i50.ts     -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M     -x264opts avcintra-class=100 -x264opts colorprim=bt709     -x264opts transfer=bt709 -x264opts colormatrix=bt709     -vf "setfield=1,yadif"     -video_size 1920x1080 -r 50  -ac 2 -c:a aac -b:a 128k     outputComplex.mp4
+  408  mediainfo outputComplex.mp4 
+  409  cd /mnt/smb-nas1/output_prod/
+  410  ls
+  411  mediainfo prod_Complexsource_1080i50.mp4 
+  412  cd
+  413  sudo ffmpeg -y -i /mnt/smb-nas1/input/Complexsource_1080i50.ts  -vcodec libx264 -g 1 -pix_fmt yuv422p10le -vb 100M -x264opts avcintra-class=100 -x264opts colorprim=bt709 -x264opts transfer=bt709 -x264opts colormatrix=bt709 -vf "setfield=1,yadif" -video_size 1920x1080 -r 50 -ac 2 -c:a aac -b:a 128k prod_Complexsource_1080i50.mp4
+  414  mediainfo prod_Complexsource_1080i50.mp4 
+  415  sudo mv prod_Complexsource_1080i50.mp4 /mnt/smb-nas1/output_prod/ 
+  416  history
+  417  ls
+  418  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  outputComplex.mp4 
+  419  cd /mnt/smb-nas1/output_prod/
+  420  ls
+  421  mediaconch -fs --Policy=/home/administrator/mediaconch_policy.xml  prod_Complexsource_1080i50.mp4 
+  422  cd ../input/
+  423  ls
+  424  cd ..
+  425  cd output_prod/
+  426  ls
+  427  mediainfo prod_foodstand_1080i50.mp4 
+  428  ffprobe -showstreams prod_foodstand_1080i50.mp4 
+  429  history
+  430  ffprobe -show_streams prod_foodstand_1080i50.mp4 
+  431  cd ../output_plex/
+  432  ffprobe -show_streams plex_foodstand_1080i50.mp4 
+  433  cd /mnt/smb-nas1/output_prod/
+  434  ls
+  435  mediainfo prod_France2_1080i50.mp4 
+  436  cd
+  437  chmod 777 transcoScript.sh 
+  438  ls
+  439  ls /mnt/smb-nas1/input/
+  440  sudo bash transcoScript.sh test108000.mp4 testoutputsoir.mp4
+  441  ls
+  442  mediainfo testoutputsoir.mp4 
+  443  cd /mnt/smb-nas1/input/
+  444  ls
+  445  cd 
+  446  sudo bash transcoScript.sh /mnt/smb-nas1/input/videoSecond.mp4 prod_videoSecond.mp4
+  447  nano transcoScript.sh 
+  448  sudo bash transcoScript.sh /mnt/smb-nas1/input/videoSecond.mp4 prod_videoSecond.mp4
+  449  sudo ffmpeg -y -i /mnt/smb-nas1/input/videoSecond.mp4 -vb 2M -video_size 1280x720 -r 25 -ac 2 -c:a aac -b:a 128kplex_videoSecond.mp4
+  450  sudo ffmpeg -y -i /mnt/smb-nas1/input/videoSecond.mp4 -vb 2M -video_size 1280x720 -r 25 -ac 2 -c:a aac -b:a 128k plex_videoSecond.mp4
+  451  chmod 777 transcoScriptPlex.sh 
+  452  sudo bash transcoScriptPlex.sh /mnt/smb-nas1/input/videoSecond.mp4 plex_videoSecond.mp4
+  453  nano transcoScript.sh 
+  454  nano transcoScriptPlex.sh 
+  455  cd /mnt/smb-nas1/output_prod/
+  456  ll
+  457  mediainfo prod_videoSecond.mp4 
+  458  ping google.com
+  459  htop
+  460  apt install htop
+  461  sudo apt install htop
+  462  df
+  463  htop
+  464  cd /mnt/smb-nas1/input/
+  465  ll
+  466  cd /mnt/smb-nas1/output_prod/
+  467  ls
+  468  ll
+  469  sudo rm output.mp4 
+  470  sudo rm output_test108000.mxf 
+  471  sudo rm prod_test108000.mxf 
+  472  sudo rm prod_test108001.mxf 
+  473  sudo rm prod_videoSecond.mxf 
+  474  ll
+  475  cd ../input/
+  476  ll
+  477  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/'JEAN_ REPORTAGE_ProRes_422HQ.mov' /mnt/smb-nas1/input/
+  478  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/JEAN_ REPORTAGE_ProRes_422HQ.mov /mnt/smb-nas1/input/
+  479  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/JEAN_REPORTAGE_ProRes_422HQ.mov /mnt/smb-nas1/input/
+  480  sudo sshpass -p "Admin@2021" scp administrator@192.168.254.1:/home/ina/ftp/uploads/MASTERMIXE24REPORTAGE_YLMDNXHD120_1.mxf /mnt/smb-nas1/input/
+  481  ls
+  482  cd ../output_prod/
+  483  ll
+  484  ffprobe prod_BBB_1920x1080p_24_422_audio5.mp4
+  485  ffprobe prod_Complexsource_1080i50.mp4
+  486  ffprobe prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.mp4
+  487  cd 
+  488  ls
+  489  nano transcoScript.sh 
+  490  sudo bash transcoScript.sh /mnt/smb-nas1/input/France2_1080i50.ts lastest.mp4
+  491  sudo bash transcoScript.sh /mnt/smb-nas1/input/videoSecond.mp4 lastest.mp4
+  492  nano transcoScript.sh 
+  493  sudo bash transcoScript.sh /mnt/smb-nas1/input/France2_1080i50.ts lastest.mp4
+  494  nano transcoScript.sh 
+  495  ll
+  496  mediainfo lastest.mp4 
+  497  mediainfo /mnt/smb-nas1/input/France2_1080i50.ts 
+  498  htop
+  499  nano transcoScript.sh 
+  500  sudo bash transcoScript.sh /mnt/smb-nas1/input/BBB_1920x1080p_24_422_audio5.1_AS10.mxf lastest.mp4
+  501  mediainfo lastest.mp4 
+  502  mv lastest.mp4 prod2_BBB_1920x1080p_24_422_audio5.1_AS10.mp4
+  503  mv prod2_BBB_1920x1080p_24_422_audio5.1_AS10.mp4 /mnt/smb-nas1/output_prod/
+  504  sudo mv prod2_BBB_1920x1080p_24_422_audio5.1_AS10.mp4 /mnt/smb-nas1/output_prod/
+  505  nano transcoScript.sh 
+  506  htop
+  507  sudo bash transcoScript.sh /mnt/smb-nas1/input/JEAN_REPORTAGE_ProRes_422HQ.mov prod_JEAN_REPORTAGE_ProRes_422HQ.mp4
+  508  ls
+  509  ll
+  510  mediainfo prod_JEAN_REPORTAGE_ProRes_422HQ.mp4 
+  511  sudo mv prod_JEAN_REPORTAGE_ProRes_422HQ.mp4 /mnt/smb-nas1/output_prod/
+  512  htop
+  513  ll
+  514  ls /mnt/smb-nas1/input/
+  515  sudo bash transcoScript.sh /mnt/smb-nas1/input/Complexsource_1080i50.ts prod_Complexsource_1080i50.ts.mp4 &
+  516  sudo bash transcoScript.sh /mnt/smb-nas1/input/Complexsource_1080i50.ts prod_Complexsource_1080i50.ts.mp4
+  517  mediainfo prod_Complexsource_1080i50.ts.mp4 
+  518  mv prod_Complexsource_1080i50.ts.mp4 /mnt/smb-nas1/output_prod/
+  519  sudo mv prod_Complexsource_1080i50.ts.mp4 /mnt/smb-nas1/output_prod/
+  520  cp 
+  521  cd /mnt/smb-nas1/input/
+  522  ls
+  523  cp France2_1080i50.ts ../output_prod/France2_1080i50.ts
+  524  sudocp France2_1080i50.ts ../output_prod/France2_1080i50.ts
+  525  sudo cp France2_1080i50.ts ../output_prod/France2_1080i50.ts
+  526  cd ..
+  527  cd
+  528  sudo bash transcoScript.sh /mnt/smb-nas1/input/France2_1080i50.ts prod_France2_1080i50.mp4
+  529  mv prod_France2_1080i50.mp4 /mnt/smb-nas1/output_prod/
+  530  sudo mv prod_France2_1080i50.mp4 /mnt/smb-nas1/output_prod/
+  531  sudo bash transcoScript.sh /mnt/smb-nas1/input/TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1.avi prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1.mp4
+  532  nano transcoScript.sh 
+  533  sudo bash transcoScript.sh /mnt/smb-nas1/input/TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1.avi prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1.mp4
+  534  ls
+  535  ll
+  536  mv prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1_50Mbps.mp4 
+  537  mv prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1.mp4 /mnt/smb-nas1/output_prod/prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1_50Mbps.mp4 
+  538  sudo mv prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1.mp4 /mnt/smb-nas1/output_prod/prod_TearsOfSteel_SubFR_1920x1080_P_24_422_audio5.1_50Mbps.mp4 
+  539  sudo bash transcoScript.sh /mnt/smb-nas1/input/Complexsource_1080i50.ts prod_Complexsource_1080i50Mbps.mp4
+  540  sudo mv prod_Complexsource_1080i50 /mnt/smb-nas1/output_prod/
+  541  sudo mv prod_Complexsource_1080i50Mbps.mp4 /mnt/smb-nas1/output_prod/
+  542  history > command.txt

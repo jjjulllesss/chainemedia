@@ -1,0 +1,300 @@
+    1  sudo apt update
+    2  ping 8.8.8.8
+    3  ping 192.168.254.254
+    4  ifconfig
+    5  ip addr
+    6  ip route
+    7  ping 192.168.254.1
+    8  ping 192.168.254.254
+    9  ping 8.8.8.8
+   10  ping 192.168.254.254
+   11  sudo apt update
+   12  ping 192.168.254.254
+   13  ping 8.8.8.8
+   14  ping google.com
+   15  ping 192.168.254.254
+   16  ping google.com
+   17  ping 192.168.254.254
+   18  ping google.com
+   19  dig
+   20  dig google.fr
+   21  dig -h
+   22  dig @192.168.254.254 google.com
+   23  dig google.fr
+   24  ping google.com
+   25  dig google.fr
+   26  ping google.com
+   27  sudo apt update
+   28  sudo apt upgrade
+   29  sudo apt install vsftpd
+   30  sudo apt install ufw
+   31  sudo ufw status
+   32  sudo ufw allow ssh
+   33  sudo ufw allow ftp
+   34  sudo ufw allow 10001:10100/tcp
+   35  sudo ufw status
+   36  sudo ufw enable
+   37  sudo ufw status
+   38  sudo cp /etc/vsftpd.conf /etc/vsftpd.bak
+   39  ls
+   40  exit
+   41  cat /etc/passwd 
+   42  sudo adduser ina
+   43  sudo mkdir /home/ina/ftp
+   44  sudo chown nobody:nogroup /home/ina/ftp
+   45  sudo chmod a-w /home/ina/ftp
+   46  sudo ls -la /home/ina/ftp
+   47  sudo nano /etc/vsftpd.conf 
+   48  echo "ina" | sudo tee -a /etc/vsftpd.userlist
+   49  cat /etc/vsftpd.userlist 
+   50  sudo systemctl restart vsftpd.service 
+   51  sudo systemctl status vsftpd.service 
+   52  clea
+   53  clear
+   54  ftp -p 192.168.254.1
+   55  sudo nano /etc/vsftpd.conf 
+   56  ftp -p 192.168.254.1
+   57  touch test.txt
+   58  ls
+   59  ftp -p 192.168.254.1
+   60  pwd
+   61  ls
+   62  ftp -p 192.168.254.1
+   63  sudo chown ina:ina /home/ina/ftp
+   64  ftp -p 192.168.254.1
+   65  sudo systemctl restart vsftpd.service 
+   66  ftp -p 192.168.254.1
+   67  sudo ls -la 
+   68  sudo ls -la /home/ina
+   69  sudo ls -la /home/ina/ftp
+   70  sudo chown nobody:nogroup /home/ina/ftp/
+   71  sudo chmod a-w /home/ina/ftp
+   72  sudo ls -la /home/ina/ftp
+   73  sudo mkdir /home/ina/ftp/uploads
+   74  sudo chown ina:ina /home/ina/ftp/uploads
+   75  sudo ls -la /home/ina/ftp
+   76  ftp -p 192.168.254.1
+   77  ls uploads
+   78  ls /home/ina/ftp/uploads
+   79  rm test.txt 
+   80  ls
+   81  ls /home/ina/ftp/uploads
+   82  ftp -p 192.168.254.1
+   83  ls
+   84  systemctl status sshd
+   85  ssh
+   86  systemctl status ssh
+   87  sudo apt install openssh-server
+   88  systemctl status ssh
+   89  sudo ufw status
+   90  sudo nano /etc/vsftpd.conf 
+   91  sudo systemctl restart vsftpd.service 
+   92  ls /home/ina/ftp/uploads/
+   93  sudo nano /etc/vsftpd.conf 
+   94  sudo shutdown
+   95  sudo systemctl status vsftpd.service 
+   96  sudo systemctl status ssh 
+   97  sudo apt-get install nginx
+   98  sudo systemctl status nginx
+   99  sudo systemctl enable nginx
+  100  cd /etc/
+  101  ls
+  102  cat nginx/
+  103  cd nginx/
+  104  ls
+  105  nano nginx.conf 
+  106  clear
+  107  cd /var/www/html/
+  108  ls
+  109  nano index.nginx-debian.html 
+  110  ifconfig
+  111  ip addr
+  112  nginx -d
+  113  nginx -t
+  114  nano /etc/nginx/nginx.conf 
+  115  mv /etc/nginx/nginx.conf /etc/nginx/nginx.bak
+  116  sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.bak
+  117  sudo nano /etc/nginx/nginx.conf 
+  118  sudo nginx -s reload
+  119  nginx -t
+  120  netstat
+  121  sudo nano /etc/nginx/nginx.conf 
+  122  sudo nginx -s reload
+  123  nginx -t
+  124  sudo systemctl status nginx
+  125  sudo nginx -s reload
+  126  sudo nano /etc/nginx/nginx.conf 
+  127  sudo nginx -s reload
+  128  sudo nano /etc/nginx/nginx.conf 
+  129  ls
+  130  sudo nano /etc/nginx/nginx.conf 
+  131  cp index.nginx-debian.html index.html
+  132  sudo cp index.nginx-debian.html index.html
+  133  sudo nginx -s reload
+  134  sudo ufw status
+  135  sudo ufw allow http
+  136  sudo nginx -s reload
+  137  sudo mv /etc/nginx/nginx.bak /etc/nginx/nginx.conf
+  138  sudo nginx -s reload
+  139  sudo nano /etc/nginx/nginx.conf
+  140  cd /etc/nginx/sites-enabled/
+  141  ls
+  142  nano default 
+  143  clear
+  144  sudo nano /etc/nginx/nginx.conf
+  145  ls
+  146  cd ..
+  147  ls
+  148  cd sites-available/
+  149  ls
+  150  nano default 
+  151  exit
+  152  cd /home/ina/ftp/uploads/
+  153  touch test.txt
+  154  sudo su
+  155  exit
+  156  sudo su
+  157  exit
+  158  sudo su
+  159  exit
+  160  sudo su
+  161  ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_30sec.ts
+  162  sudo ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_30sec.ts
+  163  sudo chmod -R a+rwx /home/ina/ftp/uploads/
+  164  ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_30sec.ts
+  165  exit
+  166  usermod -aG sudo administrator
+  167  sudo usermod -aG sudo administrator
+  168  sudo whoami
+  169  exit
+  170  sudo whoami
+  171  sudo visudo
+  172  exit
+  173  sudo whoami
+  174  ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_00.ts
+  175  sudo ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_00.ts
+  176  cd /home/ina/ftp/uploads/
+  177  lls
+  178  ls
+  179  ls /home/ina/ftp/uploads/
+  180  exit
+  181  sudo chmod ugo+rwx /home/ina/ftp/uploads/
+  182  ls
+  183  cd Documents/
+  184  touch test.txt
+  185  pwd
+  186  ls /home/ina/ftp/uploads/
+  187  cd /home/ina/ftp/uploads/
+  188  pwd
+  189  sudo chmod -R a+rw /home/ina/ftp/uploads
+  190  exit
+  191  cd /home/ina/ftp/uploads/
+  192  ls
+  193  touch hello-world.txt
+  194  touch hello-world.md
+  195  df
+  196  ls
+  197  ll
+  198  history
+  199  sudo chmod -R a+rw /home/ina/ftp/uploads
+  200  top
+  201  htop
+  202  sudo apt install htop 
+  203  ls
+  204  rm P81_GlassBlowing2_1920x1080@59.94fps_15200kbps_fmp4.mp4 
+  205  rm hello-world.md 
+  206  rm hello-world.txt 
+  207  rm essai.txt 
+  208  sudo apt install htop 
+  209  rm SERGE_EMISSION_ProRes_422_HQ.mov 
+  210  sudo apt install htop 
+  211  ping google.com
+  212  nano /etc/nameserver
+  213  sudo nano /etc/resolv.conf 
+  214  ping google.com
+  215  sudo nano /etc/netplan/01-network-manager-all.yaml 
+  216  sudo nano /etc/resolv.conf 
+  217  ping google.com
+  218  sudo apt install htop 
+  219  htop
+  220  df
+  221  sudo chmod -R a+rw /home/ina/ftp/uploads
+  222  history
+  223  ls
+  224  rm ElephantDream_SubFR_1920x1080_P_24_422_audio5.1.avi 
+  225  ls
+  226  df
+  227  touch test.txt
+  228  touch hello-world.txt
+  229  ls
+  230  touch test.txt
+  231  touch test.md
+  232  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/bionic.gpg | sudo apt-key add -
+  233  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/bionic.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+  234  sudo apt install curl
+  235  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/bionic.gpg | sudo apt-key add -
+  236  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/bionic.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+  237  sudo apt-get update
+  238  sudo apt-get install tailscale
+  239  sudo tailscale up
+  240  ip a
+  241  ls
+  242  history
+  243  visudo
+  244  sudo visudo
+  245  whoami
+  246  sudo visudo
+  247  sudo chmod -R a+rw /home/ina/ftp/uploads
+  248  ll
+  249  cd ..
+  250  ll
+  251  nano /etc/vsftpd.conf 
+  252  sudo nano /etc/vsftpd.conf 
+  253  ip a
+  254  systemctl restart sftp
+  255  systemctl restart sftpd
+  256  systemctl status vsftpd
+  257  systemctl restart vsftpd
+  258  systemctl status vsftpd
+  259  cd uploads/
+  260  ls
+  261  ll
+  262  rm DONE.VID_SPIDER9\ -\ 06-OCT-2020.mxf 
+  263  sudo visudo
+  264  ls
+  265  sudo ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/test10800.mp4 
+  266  cd /home/ina/ftp/uploads/
+  267  ls
+  268  history
+  269  ls
+  270  rm test108000.mp4 
+  271  ls
+  272  sudo rm
+  273  ls
+  274  ld
+  275  ls
+  276  cd /etc/default/
+  277  ls
+  278  cd nginx
+  279  cd ..
+  280  ls
+  281  cd nginx/
+  282  ls
+  283  cd sites-available/
+  284  ls
+  285  nano default 
+  286  cd ..
+  287  cd sites-enabled/
+  288  ls
+  289  nano default 
+  290  cd ..
+  291  cd /home/ina/ftp/uploads/
+  292  ls
+  293  ll
+  294  ls
+  295  cd /home/ina/ftp/uploads/
+  296  ls
+  297  cd /home/ina/ftp/uploads/
+  298  ls
+  299  exit
+  300  history > historydmz.txt
