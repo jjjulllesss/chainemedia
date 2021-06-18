@@ -1,0 +1,543 @@
+    1  sudo su
+    2  dockr
+    3  docker ps
+    4  sudo so
+    5  sudo su
+    6  exit
+    7  docker ps
+    8  sudo su
+    9  exit
+   10  sudo su
+   11  curl
+   12  sudo apt install curl
+   13  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
+   14  curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+   15  sudo apt-get update
+   16  sudo apt-get install tailscale
+   17  sudo tailscale up
+   18  ip addr show tailscale0
+   19  docker ps
+   20  sudo docker ps
+   21  docker run -d -p 8001:8001 -v guacamole_config:/config oznu/guacamole
+   22  sudo docker run -d -p 8001:8001 -v guacamole_config:/config oznu/guacamole
+   23  sudo docker ps
+   24  sudo ufw status
+   25  sudo docker ps
+   26  ls
+   27  sudo docker ps
+   28  sudo docker rm c8e5b6343086
+   29  sudo docker stop c8e5b6343086
+   30  sudo docker ps
+   31  sudo docker ps -a
+   32  sudo docker rm c8e5b6343086
+   33  sudo docker ps -a
+   34  mkdir guacamole_config
+   35  sudo docker run -p 8080:8080 -v guacamole_config:/config oznu/guacamole
+   36  ping 172.23.99.106
+   37  ping 172.23.99.105
+   38  ping 172.23.99.104
+   39  ping 172.23.99.103
+   40  ping 172.23.99.102
+   41  ping 172.23.99.107
+   42  ping 172.23.99.108
+   43  ping 172.23.99.109
+   44  ping 172.23.99.110
+   45  ping 172.23.99.111
+   46  ping 172.23.99.112
+   47  ping 172.23.99.113
+   48  ping 172.23.99.114
+   49  ping 172.23.99.255
+   50  ping -b 172.23.99.255
+   51  sudo apt install nmap
+   52  nmap -sS 172.23.99.*
+   53  sudo nmap -sS 172.23.99.*
+   54  ssh cisco@172.23.99.254
+   55  telnet 172.23.99.254
+   56  telnet 172.23.99.115
+   57  telnet 172.23.99.13
+   58  ping 172.23.99.255
+   59  ping -b 172.23.99.255
+   60  telnet 172.23.99.13
+   61  telnet 172.23.99.1
+   62  dig firewall
+   63  dig firewall.chainemedia
+   64  ping 192.168.12.11
+   65  ping 192.168.10.1
+   66  ping 192.168.10.2
+   67  traceroute 192.168.10.1
+   68  sudo apt install inetutils
+   69  sudo apt install inetutils-traceroute
+   70  traceroute 192.168.10.1
+   71  ping 192.168.10.1
+   72  ping 192.168.10.2
+   73  ip addr
+   74  ping 192.168.12.2
+   75  ip addr
+   76  sudo su
+   77  ping 172.23.99.106
+   78  telnet 172.23.99.13
+   79  ping 8.8.8.8
+   80  ping 192.168.12.11
+   81  ping 192.168.12.1
+   82  sudo so
+   83  sudo -s
+   84  ls
+   85  cd /
+   86  ls
+   87  sudo su
+   88  vncpwd
+   89  vncpasswd
+   90  vncserver -localhost no 
+   91  vncserver -list 
+   92  systemctl status vncserver
+   93  systemctl status vncserver@1
+   94  systemctl kill vncserver@1
+   95  systemctl status vncserver@1
+   96  sudo su
+   97  vncpasswd
+   98  sudo su
+   99  dig google.com
+  100  ssh administrator@192.168.254.1
+  101  sudo netplan apply
+  102  ip a
+  103  ssh administrator@192.168.11.3
+  104  ls
+  105  ssh administrator@192.168.11.3
+  106  ssh administrator@192.168.254.254
+  107  ssh administrator@192.168.254.1
+  108  sudo su
+  109  ssh administrator@192.168.254.1 ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_00.ts
+  110  ssh administrator@192.168.254.1 sudo ffprobe -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_00.ts
+  111  ssh administrator@192.168.254.1 sudo ffprobe -hide_banner -show_format -show_streams -print_format json -loglevel quiet /home/ina/ftp/uploads/bbb24p_00.ts
+  112  ftp -p 172.20.254.254
+  113  htop
+  114  top
+  115  exit
+  116  telnet 192.168.10.1
+  117  ls
+  118  cd prometheus-2.27.1.linux-amd64/
+  119  nano prometheus.yml 
+  120  apt
+  121  clear
+  122  ls
+  123  cd prometheus-2.27.1.linux-amd64/
+  124  mv prometheus.yml prometheus.bak
+  125  ls
+  126  sudo su
+  127  ssh administrator@192.168.11.3 
+  128  scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts administrator@192.168.11.3:/media
+  129  sudo scp administrator@192.168.254.1:/home/ina/ftp/uploads/bbb24p_30sec.ts administrator@192.168.11.3:/media
+  130  ssh administrator@192.168.254.1
+  131  sudo su
+  132  cd prometheus-2.27.1.linux-amd64/
+  133  ls
+  134  nano prometheus.yml
+  135  cd prometheus-2.27.1.linux-amd64/
+  136  ls
+  137  nano prometheus.yml
+  138  cd prometheus-2.27.1.linux-amd64/
+  139  ls
+  140  touch prometheus.yml
+  141  nano prometheus.yml 
+  142  cd prometheus-2.27.1.linux-amd64/
+  143  ssh administrator@192.168.11.3
+  144  cd prometheus-2.27.1.linux-amd64/
+  145  ls
+  146  nano prometheus.yml 
+  147  ./prometheus --config.file=prometheus.yml
+  148  nano prometheus.yml 
+  149  ./prometheus --config.file=prometheus.yml
+  150  nano prometheus.yml 
+  151  ./prometheus --config.file=prometheus.yml
+  152  nano prometheus.yml 
+  153  ./prometheus --config.file=prometheus.yml
+  154  nano prometheus.yml 
+  155  ./prometheus --config.file=prometheus.yml
+  156  nano prometheus.yml 
+  157  ./prometheus --config.file=prometheus.yml
+  158  wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+  159  ls
+  160  tar xvfz node_exporter-1.1.2.linux-amd64.tar.gz 
+  161  cd node_exporter-1.1.2.linux-amd64/
+  162  ./node_exporter 
+  163  ./node_exporter --web.listen-address 127.0.0.1:9091
+  164  ./node_exporter
+  165  ssh administrator@192.168.11.4
+  166  yes
+  167  ssh administrator@192.168.11.3
+  168  cd prometheus-2.27.1.linux-amd64/
+  169  nano prometheus.yml
+  170  ps -aux | grep prom
+  171  sudo kill -HUP 10113
+  172  netstat
+  173  exit
+  174  sudo su
+  175  cd /mnt/ftpserver/
+  176  ls
+  177  sudo su
+  178  ssh administrator@192.168.11.3
+  179  ssh 192.168.254.1
+  180  ps -aux
+  181  sudo kill 2504
+  182  ps -aux
+  183  node_exporter-1.1.2.linux-amd64/node_exporter --collector.systemd --collector.processes
+  184  node_exporter-1.1.2.linux-amd64/node_exporter 
+  185  node_exporter-1.1.2.linux-amd64/node_exporter --collector.systemd --collector.processes
+  186  node_exporter-1.1.2.linux-amd64/node_exporter --collector.systemd --collector.processes &
+  187  telnet 192.168.10.1
+  188  curl 192.168.10.4:9182/metrics
+  189  cd prometheus-2.27.1.linux-amd64/
+  190  nano prometheus.yml 
+  191  ps -aux | grep prom
+  192  sudo kill -HUP 20595
+  193  ps -aux | grep prom
+  194  sudo kill -HUP 20595
+  195  nano prometheus.yml 
+  196  sudo kill -HUP 20595
+  197  nano prometheus.yml 
+  198  sudo kill -HUP 20595
+  199  nano prometheus.yml 
+  200  sudo kill -HUP 20595
+  201  nano prometheus.yml 
+  202  sudo kill -HUP 20595
+  203  nano prometheus.yml 
+  204  sudo kill -HUP 20595
+  205  nano prometheus.yml 
+  206  sudo kill -HUP 20595
+  207  cd prometheus-2.27.1.linux-amd64/
+  208  nano prometheus.yml 
+  209  ./prometheus 
+  210  ps -aux
+  211  sudo kill 2489
+  212  ./prometheus 
+  213  nano prometheus.yml 
+  214  ./prometheus 
+  215  ./prometheus --config.file=prometheus.yml
+  216  nano prometheus.yml 
+  217  ./prometheus --config.file=prometheus.yml
+  218  nano prometheus.yml 
+  219  ./prometheus --config.file=prometheus.yml
+  220  nano prometheus.yml 
+  221  ./prometheus --config.file=prometheus.yml
+  222  nano prometheus.yml 
+  223  ./prometheus --config.file=prometheus.yml
+  224  ./prometheus --config.file=prometheus.yml &
+  225  nano prometheus.yml 
+  226  sudo systemctl reload graphana
+  227  sudo systemctl reload graphana_server
+  228  sudo systemctl reload graphana-server
+  229  nano prometheus.yml 
+  230  ps -aux | grep prom
+  231  sudo kill -HUP 8989
+  232  sudo kill 8989
+  233  ./prometheus --config.file=prometheus.yml &
+  234  nano prometheus.yml 
+  235  ip addr
+  236  nano prometheus.yml 
+  237  ps -aux | grep grap
+  238  ps -aux | grep graphana
+  239  sudo systemctl status graphana
+  240  sudo systemctl status graphana-server
+  241  nano prometheus.yml 
+  242  ps -aux | grep prom
+  243  sudo kill -HUP 10113
+  244  free
+  245  free -h
+  246  sudo kill 10113
+  247  ./prometheus --config.file=prometheus.yml --web.enable-admin-api &
+  248  curl -X POST -g 'http://localhost:9090/api/v1/admin/tsdb/delete_series?match[]={__name__=~".+"}'
+  249  curl -X POST -g 'http://localhost:9090/api/v1/admin/tsdb/clean_tombstones'
+  250  systemctl status prometheus
+  251  curl -X POST -g 'http://localhost:9090/api/v1/admin/tsdb/delete_series?match[]={job="monitoring"}'
+  252  snmpwalk
+  253  sudo apt install snmp
+  254  snmpwalk
+  255  telnet 192.168.10.1
+  256  snmpwalk -c public 192.168.10.2
+  257  snmpwalk ?
+  258  snmpwalk -h
+  259  snmpwalk -v2c -c public 192.168.10.2
+  260  snmpwalk -v2c - public 192.168.10.2
+  261  telnet 192.168.10.1
+  262  snmpwalk -v2c -cpublic 192.168.10.1 1.3.6.1.2.1.1
+  263  cd ..
+  264  wget https://github.com/prometheus/snmp_exporter/releases/download/v0.20.0/snmp_exporter-0.20.0.linux-amd64.tar.gz
+  265  tar xvfz snmp_exporter-0.20.0.linux-amd64.tar.gz 
+  266  ls
+  267  cd snmp_exporter-0.20.0.linux-amd64/
+  268  ./snmp_exporter 
+  269  ls
+  270  nano snmp.yml 
+  271  cd ..
+  272  cd snmp_exporter-0.20.0.linux-amd64/
+  273  ./snmp_exporter 
+  274  ./snmp_exporter &
+  275  nano prometheus.yml 
+  276  cd ..
+  277  cd prometheus-2.27.1.linux-amd64/
+  278  nano prometheus.yml 
+  279  ip addr
+  280  nano prometheus.yml 
+  281  ps -aux | prom
+  282  ps -aux | grep prom
+  283  sudo kill -HUP 20595
+  284  nano prometheus.yml 
+  285  sudo kill -HUP 20595
+  286  telnet 192.168.10.1
+  287  cd ..
+  288  cd prometheus-2.27.1.linux-amd64/
+  289  nano prometheus.yml 
+  290  cd ..
+  291  cd snmp_exporter-0.20.0.linux-amd64/
+  292  nano snmp.yml 
+  293  cd ..
+  294  sudo apt-get install unzip build-essential libsnmp-dev p7zip-full
+  295  go get github.com/prometheus/snmp_exporter/generator
+  296  sudo add-apt-repository ppa:longsleep/golang-backports
+  297  sudo apt update
+  298  sudo apt install golang-go
+  299  go get github.com/prometheus/snmp_exporter/generator
+  300  cd ${GOPATH-$HOME/go}/src/github.com/prometheus/snmp_exporter/generator
+  301  ls
+  302  cd snmp_exporter-0.20.0.linux-amd64/
+  303  cd ..
+  304  cd go
+  305  ls
+  306  cd bin
+  307  ls
+  308  go build
+  309  cd 
+  310  ls
+  311  cd ${GOPATH-$HOME/go}/src/github.com/prometheus/snmp_exporter/generator
+  312  cd go
+  313  cd src
+  314  cdls
+  315  ls
+  316  cd pkg/
+  317  ls
+  318  cd ../..
+  319  ls
+  320  go get github.com/prometheus/snmp_exporter/generator
+  321  ls
+  322  cd /
+  323  ls
+  324  which go
+  325  cd /usr/bin/go
+  326  cd /usr/bin/
+  327  ls
+  328  cd
+  329  cd ${GOPATH-$HOME/go}
+  330  ls
+  331  cd src
+  332  GOPATH
+  333  cd GOPATH
+  334  go help gopath
+  335  cd ..
+  336  ls
+  337  cd administrator/
+  338  ls
+  339  cd go
+  340  ls
+  341  go get github.com/prometheus/snmp_exporter/generator
+  342  ls
+  343  GOPATH=/tmp
+  344  go get github.com/prometheus/snmp_exporter/generator
+  345  cd ${GOPATH-$HOME/go}/src/github.com/prometheus/snmp_exporter/generator
+  346  cd 
+  347  git
+  348  git clone github.com/prometheus/snmp_exporter/generator
+  349  git clone https://github.com/prometheus/snmp_exporter.git
+  350  cd
+  351  ls
+  352  cd snmp_exporter
+  353  ls
+  354  cd generator/
+  355  go build
+  356  make mibs
+  357  ls
+  358  export MIBDIRS=mibs
+  359  ./generator generate
+  360  nano snmp.yml 
+  361  cat snmp.yml | grep community
+  362  nano snmp.yml 
+  363  nano generator.yml 
+  364  mv generator.yml
+  365  mv generator.yml generator.bak
+  366  nano generator.yml 
+  367  ./generator generate
+  368  nano generator.yml 
+  369  ./generator generate
+  370  nano generator.bak
+  371  nano generator.yml 
+  372  rm generator.yml 
+  373  nano generator.yml 
+  374  nano generator.bak
+  375  nano generator.yml 
+  376  ./generator generate
+  377  nano generator.bak
+  378  mv generator.bak generator.yml
+  379  nano generator.yml 
+  380  ./generator generate
+  381  cd ..
+  382  ls
+  383  cd generator/
+  384  cp snmp.yml ../snmp.yml 
+  385  cd ..
+  386  ./snmp_exporter
+  387  cd ..
+  388  ls
+  389  cd snmp_exporter
+  390  ls
+  391  cp snmp.yml ../snmp_exporter-0.20.0.linux-amd64/snmp.yml 
+  392  cd ..
+  393  ls
+  394  snmp_exporter-0.20.0.linux-amd64/
+  395  cd snmp_exporter-0.20.0.linux-amd64/
+  396  ls
+  397  cat snmp.yml | grep public
+  398  ./snmp_exporter 
+  399  ps -aux
+  400  sudo kill 25329
+  401  ./snmp_exporter 
+  402  ./snmp_exporter &
+  403  cd ..
+  404  ls
+  405  cd prometheus-2.27.1.linux-amd64/
+  406  ls
+  407  nano prometheus.yml 
+  408  cd
+  409  nmap 172.23.99.*
+  410  nmap -sS 172.23.99.0/24
+  411  sudo nmap -sS 172.23.99.0/24
+  412  ping -b 172.23.99.255
+  413  ping -b 192.168.10.255
+  414  sudo nmap -sS 172.23.99.0/24
+  415  telnet 192.168.10.1
+  416  telnet 172.23.99.254
+  417  telnet 172.23.99.1
+  418  telnet 192.168.10.1
+  419  ping 172.23.99.13
+  420  curl 172.23.99.13
+  421  curl
+  422  curl -h
+  423  curl 172.23.99.13
+  424  http://172.23.99.13/csd6d5153b/
+  425  curl http://172.23.99.13/csd6d5153b/
+  426  ping 192.168.10.11
+  427  cd prometheus-2.27.1.linux-amd64/
+  428  nano prometheus.yml 
+  429  ps -aux | grep prom
+  430  sudo kill -HUP 20595
+  431  nano prometheus.yml 
+  432  sudo kill -HUP 20595
+  433  nano prometheus.yml 
+  434  sudo kill -HUP 20595
+  435  telnet 192.168.10.11
+  436  sudo kill -HUP 20595
+  437  nano prometheus.yml 
+  438  sudo kill -HUP 20595
+  439  ps -aux
+  440  tailscale
+  441  tailscale status
+  442  ls
+  443  prometheus-2.27.1.linux-amd64/prometheus
+  444  cd prometheus-2.27.1.linux-amd64/
+  445  ls
+  446  ./prometheus --config.file=prometheus.yml
+  447  ./prometheus --config.file=prometheus.yml &
+  448  cd ..
+  449  cd node_exporter-1.1.2.linux-amd64/
+  450  ./node_exporter &
+  451  cd /
+  452  cd
+  453  sudo apt-get install grafana
+  454  sudo apt-get install -y apt-transport-https
+  455  sudo apt-get install -y software-properties-common wget
+  456  wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+  457  echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+  458  sudo apt-get update
+  459  sudo apt-get install grafana
+  460  sudo systemctl daemon-reload
+  461  sudo systemctl start grafana-server
+  462  sudo systemctl status grafana-server
+  463  sudo systemctl enable grafana-server.service
+  464  sudo systemctl status grafana-server
+  465  ssh administrator@192.168.10.4
+  466  ssh administrator@192.168.10.3
+  467  ssh administrator@192.168.11.3
+  468  ping 192.168.10.4
+  469  ping 192.168.10.2
+  470  ping 192.168.11.3
+  471  curl 192.168.11.3:9100
+  472  ls
+  473  ps -aux
+  474  ps -aux | grep node
+  475  history
+  476  history | grep node
+  477  nohup node_exporter-1.1.2.linux-amd64/node_exporter --collector.systemd --collector.processes &
+  478  ssh administrator@192.168.11.3
+  479  ssh 192.168.11.3
+  480  cd prometheus-2.27.1.linux-amd64/
+  481  nano prometheus.yml 
+  482  cd prometheus-2.27.1.linux-amd64/
+  483  nano prometheus.yml 
+  484  cd prometheus-2.27.1.linux-amd64/
+  485  nano prometheus.yml 
+  486  ps -aux
+  487  ps -aux | grep prom
+  488  sudo kill -HUP 20595
+  489  nano prometheus.yml 
+  490  sudo kill -HUP 20595
+  491  grafana-cli plugins install vonage-status-panel
+  492  sudo grafana-cli plugins install vonage-status-panel
+  493  service grafana-server restart
+  494  sudo service grafana-server restart
+  495  cd /mnt/ftpserver/
+  496  ls
+  497  ll
+  498  ls
+  499  ssh 192.168.11.3 sudo mv /home/administrator/plex_videoSecond.mxf /mnt/smb-nas1/output_plex/
+  500  ssh 192.168.11.3 sudo mv /home/administrator/plex_videoSecond.mp4 /mnt/smb-nas1/output_plex/
+  501  telnet 192.168.10.1
+  502  exit
+  503  sudo nano /etc/grafana/grafana.ini 
+  504  sudo systemctl restart grafana-server
+  505  sudo systemctl status grafana-server
+  506  sudo nano /etc/grafana/grafana.ini 
+  507  grafana-cli plugins update-all
+  508  sudo systemctl restart grafana-server
+  509  GF_PANELS_DISABLE_SANITIZE_HTML=true
+  510  GF_PANELS_DISABLE_SANITIZE_HTML
+  511  echo GF_PANELS_DISABLE_SANITIZE_HTML
+  512  sudo systemctl restart grafana-server
+  513  sudo nano /etc/grafana/grafana.ini 
+  514  sudo systemctl restart grafana-server
+  515  exit
+  516  cd prometheus-2.27.1.linux-amd64/
+  517  nano prometheus;y
+  518  nano prometheus.yml
+  519  ps -aux | grep prom
+  520  sudo kill -HUP 20595
+  521  cat /etc/services
+  522  sudo cat /etc/services
+  523  sudo netstat -tulpn | grep LISTEN
+  524  netstat
+  525  sudo apt install net-tools 
+  526  sudo netstat -tulpn | grep LISTEN
+  527  sudo nano /etc/grafana/grafana.ini 
+  528  sudo systemctl restart grafana-server
+  529  sudo nano /etc/grafana/grafana.ini 
+  530  sudo systemctl restart grafana-server
+  531  sudo systemctl status grafana-server
+  532  setcap 'cap_net_bind_service=+ep' /usr/sbin/grafana-server
+  533  sudo setcap 'cap_net_bind_service=+ep' /usr/sbin/grafana-server
+  534  sudo systemctl restart grafana-server
+  535  sudo systemctl status grafana-server
+  536  sudo nano /etc/grafana/grafana.ini 
+  537  sudo systemctl restart grafana-server
+  538  cd prometheus-2.27.1.linux-amd64/
+  539  nano prometheus.yml
+  540  sudo kill -HUP 20595
+  541  htop
+  542  top
+  543  history > commandMonitoring.txt

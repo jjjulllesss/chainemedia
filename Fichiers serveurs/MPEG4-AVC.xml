@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+  <policy type="and" name="MPEG-4 AVC (H.264/AAC)" license="CC-BY-4.0+"> 
+    <description>
+      This is a very common combination of lossy encoding found in the wild.&#xD;
+      &#xD; Yet, the codec name inside the media files is *not* H.264, but "Advanced Video Coding" 
+      (AVC).
+    </description>
+    <rule name="Audio format is AAC?" value="Format" tracktype="Audio" occurrence="*" 
+    operator="=">AAC</rule> <rule name="Video format is AVC?" value="Format" tracktype="Video" 
+    occurrence="*" operator="=">AVC</rule>
+  </policy>
