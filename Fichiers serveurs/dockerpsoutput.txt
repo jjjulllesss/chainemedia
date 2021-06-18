@@ -1,0 +1,4 @@
+CONTAINER ID   IMAGE              COMMAND                  CREATED      STATUS                  PORTS                      NAMES
+f3e7c72ab687   nodered/node-red   "npm --no-update-not…"   3 days ago   Up 47 hours (healthy)   0.0.0.0:1880->1880/tcp     mynodered
+dab01c136477   oznu/guacamole     "/init"                  3 days ago   Up 2 days               0.0.0.0:8080->8080/tcp     cranky_tereshkova
+cc21ae923037   mongo              "docker-entrypoint.s…"   3 days ago   Up 2 days               0.0.0.0:27017->27017/tcp   mongo-on-docker
