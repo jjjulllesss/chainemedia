@@ -29,8 +29,10 @@ var xhttp = new XMLHttpRequest();
                 var table = document.getElementById("main");
 
 
-                if (xmlDoc.getElementsByTagName("type")[i].childNodes[0].nodeValue == "GROUP" || xmlDoc.getElementsByTagName("type")[i].childNodes[0].nodeValue == "STILL") {
-					; // Si dans le fichier XML il trouve les balise <type> contenant les valeurs "GROUP" et "STILL" -> ne pas completer le tableau
+                if (xmlDoc.getElementsByTagName("type")[i].childNodes[0].nodeValue == "GROUP" || 
+		    xmlDoc.getElementsByTagName("type")[i].childNodes[0].nodeValue == "STILL") {
+					; // Si dans le fichier XML il trouve les balise <type> contenant 
+					  //les valeurs "GROUP" et "STILL" -> ne pas completer le tableau
 				} else {
                         var row = table.insertRow(-1); //inserer colonne sous le tableau "main"
                         var cell0 = row.insertCell(0); //cell0 implémente la 1er colonne
