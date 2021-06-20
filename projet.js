@@ -40,17 +40,18 @@ var xhttp = new XMLHttpRequest();
                         var cell2 = row.insertCell(2); //cell2 implémente la 3eme colonne
 						var cell3 = row.insertCell(3); //cell2 implémente la 4eme colonne
 
-                        cell0.innerHTML = xmlDoc.getElementsByTagName("type")[i].childNodes[0].nodeValue; // va chercher la valeur de la ième balise <type>
+                        cell0.innerHTML = xmlDoc.getElementsByTagName("type")[i].childNodes[0].nodeValue; 
+					// va chercher la valeur de la ième balise <type>
                         cell1.innerHTML = xmlDoc.getElementsByTagName("label")[i].childNodes[0].nodeValue;
                         cell2.innerHTML = xmlDoc.getElementsByTagName("timecode")[j].childNodes[0].nodeValue;
 
-						horaire = horaire + seconds;
-						var toto = new Date(horaire * 1000).toISOString().substr(11, 8); // conversion format HH:MM:SS
-						cell3.innerHTML = toto;
-						var hms = xmlDoc.getElementsByTagName("timecode")[j].childNodes[0].nodeValue;
-						var a = hms.split(':'); // separe en format list
-						seconds = ( ((+a[0]) * 60 * 60 ) + ((+a[1]) * 60 ) + (+a[2])); // conversion en seconde
-						j=j+1;
+			horaire = horaire + seconds;
+			var toto = new Date(horaire * 1000).toISOString().substr(11, 8); // conversion format HH:MM:SS
+			cell3.innerHTML = toto;
+			var hms = xmlDoc.getElementsByTagName("timecode")[j].childNodes[0].nodeValue;
+			var a = hms.split(':'); // separe en format list
+			seconds = ( ((+a[0]) * 60 * 60 ) + ((+a[1]) * 60 ) + (+a[2])); // conversion en seconde
+			j=j+1;
                 }
         }
 }
